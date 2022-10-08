@@ -4,11 +4,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Book {
-    int id;
-    int name;
-    int author;
-    int year;
-    int personId;
+    private int id;
+    private String name;
+    private String author;
+    private int year;
+    private int personId;
 
     public int getId() {
         return id;
@@ -18,19 +18,19 @@ public class Book {
         this.id = id;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getAuthor() {
+    public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(int author) {
+    public void setAuthor(String author) {
         this.author = author;
     }
 

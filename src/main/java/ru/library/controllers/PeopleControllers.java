@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("people")
 public class PeopleControllers {
 
-    @GetMapping("/")
-    public String showPeople(Model model) {
 
+    @GetMapping("")
+    public String showPeople(Model model) {
         return "people/showPeople";
     }
 
