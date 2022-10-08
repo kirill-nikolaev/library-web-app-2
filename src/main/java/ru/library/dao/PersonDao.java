@@ -26,4 +26,13 @@ public class PersonDao {
         return jdbcTemplate.query("SELECT * FROM person WHERE person_id=?",
                 new Object[]{id}, new PersonRowMapper()).stream().findAny().orElse(null);
     }
+
+    public void deleteById(int id) {
+        jdbcTemplate.update("DELETE FROM person WHERE person_id = ?", id);
+    }
+
+    public void add(Person person) {
+        jdbcTemplate.update("INSERT INTO person(name, year) VALUES (?, ?)",
+                person.getFullName(), person.getBirthYear());
+    }
 }
