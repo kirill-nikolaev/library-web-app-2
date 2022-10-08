@@ -3,7 +3,6 @@ package ru.library.dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
-import ru.library.models.Book;
 import ru.library.models.Person;
 
 import java.util.List;
@@ -33,7 +32,7 @@ public class PersonDao {
 
     public void add(Person person) {
         jdbcTemplate.update("INSERT INTO person(name, year) VALUES (?, ?)",
-                person.getFullName(), person.getBirthYear());
+                person.getName(), person.getYear());
     }
 
     public Person findByName(String name){
@@ -47,6 +46,6 @@ public class PersonDao {
 
     public void updateById(int id, Person person) {
         jdbcTemplate.update("UPDATE person SET name = ?, year = ? WHERE person_id = ?",
-                person.getFullName(), person.getBirthYear(), id);
+                person.getName(), person.getYear(), id);
     }
 }

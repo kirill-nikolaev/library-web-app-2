@@ -25,10 +25,10 @@ public class PersonValidator implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         Person person = (Person) target;
-        Person personFromDb = personDao.findByName(person.getFullName());
+        Person personFromDb = personDao.findByName(person.getName());
 
         if (personFromDb != null && person.getId() != personFromDb.getId()) {
-            errors.rejectValue("fullName", "", "ФИО должно быть уникальным");
+            errors.rejectValue("name", "", "ФИО должно быть уникальным");
         }
     }
 }

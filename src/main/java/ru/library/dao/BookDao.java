@@ -21,13 +21,17 @@ public class BookDao {
     }
 
     public Book findById(int id) {
-        return jdbcTemplate.query("SELECT * FROM book WHERE book_id=?",
+        return jdbcTemplate.query("SELECT * FROM book WHERE book_id = ?",
                 new Object[]{id}, new BookRowMapper()).stream().findAny().orElse(null);
     }
 
     public List<Book> findByPersonId(int personId) {
-        return jdbcTemplate.query("SELECT * FROM book WHERE person_id=?",
+        return jdbcTemplate.query("SELECT * FROM book WHERE person_id = ?",
                 new Object[]{personId}, new BookRowMapper());
+    }
+
+    public void setPersonId(int bookId, Integer personId) {
+        jdbcTemplate.update("UPDATE book SET person_id = ? WHERE book_id = ?", personId, bookId);
     }
 
 }

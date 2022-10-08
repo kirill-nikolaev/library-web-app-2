@@ -2,11 +2,19 @@ package ru.library.models;
 
 import org.springframework.stereotype.Component;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Size;
+
 @Component
 public class Book {
     private int id;
+    @Size(min = 2, message = "Название книги слишком короткое")
+    @Size(max = 100, message = "Название книги слишком длинное")
     private String title;
+    @Size(min = 2, message = "Имя автора слишком короткое")
+    @Size(max = 30, message = "Имя автора слишком длинное")
     private String author;
+    @Max(value = 2022, message = "Год не может быть больше 2022")
     private int year;
     private Integer personId;
 

@@ -6,13 +6,13 @@
 </head>
 <body>
 <form method="POST" th:action="@{/people/new}" th:object="${person}">
-    <label for="fullName">Введите ФИО: </label>
-    <input type="text" id="fullName" name="fullName" th:value="${person.getFullName()}">
-    <p STYLE="color: red" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></p>
+    <label for="name">Введите ФИО: </label>
+    <input type="text" id="name" name="name" th:value="${person.getName()}">
+    <p STYLE="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
     <br/>
-    <label for="birthYear">Введите год рождения: </label>
-    <input type="text" id="birthYear" name="birthYear" th:value="${person.getBirthYear()}">
-    <p STYLE="color: red" th:if="${#fields.hasErrors('birthYear')}" th:errors="*{birthYear}"></p>
+    <label for="year">Введите год рождения: </label>
+    <input type="text" id="year" name="year" th:value="${person.getYear()}">
+    <p STYLE="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{year}"></p>
     <br/>
     <input type="submit" value="Добавить">
 </form>

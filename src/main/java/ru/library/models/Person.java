@@ -9,11 +9,11 @@ import javax.validation.constraints.Pattern;
 @Component
 public class Person {
     private int id;
-    @Pattern(regexp = "[А-Я][a-ё]+ [А-Я][a-ё]+ [А-Я][a-ё]+", message = "Введите корректные данные")
-    private String fullName;
+    @Pattern(regexp = "[А-Я][а-ё]+ [А-Я][а-ё]+ [А-Я][а-ё]+", message = "Введите корректные данные")
+    private String name;
     @Min(value = 1900, message = "Год рождения должен быть больше 1900")
     @Max(value =  2020, message = "Год рождения должен быть меньше 2020")
-    private int birthYear;
+    private int year;
 
     public Person() {
     }
@@ -27,19 +27,19 @@ public class Person {
         this.id = id;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getName() {
+        return name;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getBirthYear() {
-        return birthYear;
+    public int getYear() {
+        return year;
     }
 
-    public void setBirthYear(int birthYear) {
-        this.birthYear = birthYear;
+    public void setYear(int year) {
+        this.year = year;
     }
 }
