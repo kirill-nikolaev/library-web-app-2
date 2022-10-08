@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class Book {
     private int id;
-    private String name;
+    private String title;
     private String author;
     private int year;
-    private int personId;
+    private Integer personId;
 
     public int getId() {
         return id;
@@ -18,12 +18,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getAuthor() {
@@ -42,11 +42,11 @@ public class Book {
         this.year = year;
     }
 
-    public int getPersonId() {
+    public Integer getPersonId() {
         return personId;
     }
 
-    public void setPersonId(int personId) {
+    public void setPersonId(Integer personId) {
         this.personId = personId;
     }
 }

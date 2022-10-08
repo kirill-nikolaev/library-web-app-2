@@ -11,14 +11,23 @@ import java.util.List;
 @Component
 public class BookDao {
     private final JdbcTemplate jdbcTemplate;
-    private final BookRowMapper bookRowMapper;
     @Autowired
-    public BookDao(JdbcTemplate jdbcTemplate, BookRowMapper bookRowMapper) {
+    public BookDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
-        this.bookRowMapper = bookRowMapper;
     }
 
     public List<Book> findAll() {
-        return jdbcTemplate.query("SELECT * FROM book", bookRowMapper);
+        return jdbcTemplate.query("SELECT * FROM book", new BookRowMapper());
     }
+
+    public Book findById(int id) {
+        return jdbcTemplate.query("SELECT * FROM book WHERE book_id=?",
+                new Object[]{id}, new BookRowMapper()).stream().findAny().orElse(null);
+    }
+
+    public List<Book> findByPersonId(int personId) {
+        return jdbcTemplate.query("SELECT * FROM book WHERE person_id=?",
+                new Object[]{personId}, new BookRowMapper());
+    }
+
 }

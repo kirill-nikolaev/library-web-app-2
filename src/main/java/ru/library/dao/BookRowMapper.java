@@ -1,6 +1,5 @@
 package ru.library.dao;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
 import ru.library.models.Book;
@@ -15,10 +14,12 @@ public class BookRowMapper implements RowMapper<Book> {
         Book book = new Book();
 
         book.setId(rs.getInt("book_id"));
-        book.setName(rs.getString("name"));
+        book.setTitle(rs.getString("title"));
         book.setAuthor(rs.getString("author"));
         book.setYear(rs.getInt("year"));
-        book.setPersonId(rs.getInt("personId"));
+
+        int personId = rs.getInt("person_id");
+        book.setPersonId(rs.wasNull() ? null : personId);
 
         return book;
     }

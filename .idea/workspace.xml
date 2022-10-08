@@ -10,7 +10,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff226ced-e472-453c-9c37-1b7227428c31" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/50dd9535-c89c-446f-9a7b-bc3d2776ac32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/50dd9535-c89c-446f-9a7b-bc3d2776ac32/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/50dd9535-c89c-446f-9a7b-bc3d2776ac32/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/50dd9535-c89c-446f-9a7b-bc3d2776ac32/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/50dd9535-c89c-446f-9a7b-bc3d2776ac32/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75a0e91-e230-4213-b0a7-7f03549f717d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f75a0e91-e230-4213-b0a7-7f03549f717d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/controllers/BooksControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/controllers/BooksControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/controllers/PeopleControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/controllers/PeopleControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/dao/BookDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/dao/BookRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/dao/BookRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/dao/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/dao/PersonDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/models/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/create_tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/set_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/set_data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBooks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBooks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPeople.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPeople.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPerson.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,9 +69,11 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/kirill/IdeaProjects/LibraryWebApp",
-    "nodejs_package_manager_path": "npm"
+    "last_opened_file_path": "/home/kirill/IdeaProjects/LibraryWebApp/src/main/webapp/WEB-INF/views/books",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "2747f3bfeb835511389a692d29b775ea"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -64,7 +86,20 @@
       <recent name="ru.library.config" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.67">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.library.test" />
+      <module name="LibraryWebApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.library.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 9.0.67" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.67" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -152,6 +187,15 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.test" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.67" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -162,7 +206,8 @@
       <option name="presentableId" value="Default" />
       <updated>1665185528907</updated>
       <workItem from="1665185530141" duration="61000" />
-      <workItem from="1665185605028" duration="6260000" />
+      <workItem from="1665185605028" duration="10308000" />
+      <workItem from="1665195943882" duration="7450000" />
     </task>
     <servers />
   </component>
