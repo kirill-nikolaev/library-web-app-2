@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Изменение данных о читателе</title>
 </head>
 <body>
-
+<form th:method="PUT" th:action="@{/people/{id}(id = ${person.getId()})}" th:object = "${person}">
+    <label for="fullName">Введите ФИО: </label>
+    <input type="text" id="fullName" name="fullName" th:value="${person.getFullName()}">
+    <p style="color: red" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></p>
+    <br>
+    <label for="birthYear">Введите год рождения: </label>
+    <input type="text" id="birthYear" name="birthYear" th:value="${person.getBirthYear()}">
+    <p style="color: red" th:if="${#fields.hasErrors('birthYear')}" th:errors="*{birthYear}"></p>
+    <br>
+    <input type="submit" value="Сохранить">
+</form>
 </body>
 </html>

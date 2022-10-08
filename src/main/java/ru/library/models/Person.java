@@ -9,7 +9,7 @@ import javax.validation.constraints.Pattern;
 @Component
 public class Person {
     private int id;
-    @Pattern(regexp = "[А-Я][a-я]+ [А-Я][a-я]+ [А-Я][a-я]+", message = "Введите корректные данные")
+    @Pattern(regexp = "[А-Я][a-ё]+ [А-Я][a-ё]+ [А-Я][a-ё]+", message = "Введите корректные данные")
     private String fullName;
     @Min(value = 1900, message = "Год рождения должен быть больше 1900")
     @Max(value =  2020, message = "Год рождения должен быть меньше 2020")

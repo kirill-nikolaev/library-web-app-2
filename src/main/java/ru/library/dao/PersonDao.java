@@ -35,4 +35,18 @@ public class PersonDao {
         jdbcTemplate.update("INSERT INTO person(name, year) VALUES (?, ?)",
                 person.getFullName(), person.getBirthYear());
     }
+
+    public Person findByName(String name){
+        System.out.println(name);
+        Person person = jdbcTemplate.query("SELECT * FROM person WHERE name = ?",
+                new Object[]{name}, new PersonRowMapper()).stream().findAny().orElse(null);
+        if (person!= null)
+            System.out.println(person.getId());
+        return person;
+    }
+
+    public void updateById(int id, Person person) {
+        jdbcTemplate.update("UPDATE person SET name = ?, year = ? WHERE person_id = ?",
+                person.getFullName(), person.getBirthYear(), id);
+    }
 }

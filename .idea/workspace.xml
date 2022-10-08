@@ -10,19 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff226ced-e472-453c-9c37-1b7227428c31" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/library/util/PersonValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca5dcba4-2dfd-432a-8324-e374d2960b46.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca5dcba4-2dfd-432a-8324-e374d2960b46.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca5dcba4-2dfd-432a-8324-e374d2960b46/storage_v2/_src_/database/library_db.gs7L3Q/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca5dcba4-2dfd-432a-8324-e374d2960b46/storage_v2/_src_/database/library_db.gs7L3Q/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75a0e91-e230-4213-b0a7-7f03549f717d.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75a0e91-e230-4213-b0a7-7f03549f717d/storage_v2/_src_/database/library_bd.Rs7L3Q.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75a0e91-e230-4213-b0a7-7f03549f717d/storage_v2/_src_/database/library_bd.Rs7L3Q/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75a0e91-e230-4213-b0a7-7f03549f717d/storage_v2/_src_/database/library_bd.Rs7L3Q/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f75a0e91-e230-4213-b0a7-7f03549f717d/storage_v2/_src_/database/library_bd.Rs7L3Q/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/config/MySpringMvcDispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/config/MySpringMvcDispatcherServletInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/controllers/BooksControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/controllers/BooksControllers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/controllers/PeopleControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/controllers/PeopleControllers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/dao/PersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/dao/PersonDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/create_tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPerson.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -63,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/kirill/IdeaProjects/LibraryWebApp/src/main/webapp/WEB-INF/views/books",
+    "last_opened_file_path": "/home/kirill/IdeaProjects/CRUDApp1",
     "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "2747f3bfeb835511389a692d29b775ea"
   },
@@ -200,6 +203,7 @@
       <workItem from="1665185530141" duration="61000" />
       <workItem from="1665185605028" duration="10308000" />
       <workItem from="1665195943882" duration="10739000" />
+      <workItem from="1665255532630" duration="5392000" />
     </task>
     <servers />
   </component>
