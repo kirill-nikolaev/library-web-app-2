@@ -12,7 +12,7 @@
     <br/>
     <label for="year">Введите год рождения: </label>
     <input type="text" id="year" name="year" th:value="${person.getYear()}">
-    <p STYLE="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{year}"></p>
+    <p STYLE="color: red" th:if="${#fields.hasErrors('year')}" th:errors="*{year}"></p>
     <br/>
     <input type="submit" value="Добавить">
 </form>

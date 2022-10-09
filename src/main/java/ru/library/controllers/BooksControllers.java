@@ -4,11 +4,14 @@ package ru.library.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.library.dao.BookDao;
 import ru.library.dao.PersonDao;
 import ru.library.models.Book;
 import ru.library.models.Person;
+
+import javax.validation.Valid;
 
 
 @Controller
@@ -30,14 +33,14 @@ public class BooksControllers {
     }
 
     @GetMapping("/new")
-    public String addBook() {
-        //TODO
+    public String newBook(@ModelAttribute("book") Book book) {
         return "books/new";
     }
 
     @GetMapping("/{id}/edit")
-    public String addBook(@PathVariable("id") int id) {
-        //TODO
+    public String editBook(@PathVariable("id") int id,
+                           Model model) {
+        model.addAttribute("book", bookDao.findById(id));
         return "books/edit";
     }
 
@@ -57,20 +60,28 @@ public class BooksControllers {
     }
 
     @PostMapping("/new")
-    public String addBook(@ModelAttribute("book")Book book){
-        //TODO
+    public String createBook(@ModelAttribute("book")@Valid Book book,
+                             BindingResult bindingResult){
+        if (bindingResult.hasErrors())
+            return "/books/new";
+        bookDao.add(book);
         return "redirect:/books";
     }
 
     @PutMapping("/{id}")
-    public String editBook(@PathVariable("id") int id) {
-        //TODO
+    public String putBook(@PathVariable("id") int id,
+                          @ModelAttribute("book")@Valid Book book,
+                          BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "books/edit";
+        }
+        bookDao.updateById(id, book);
         return "redirect:/books";
     }
 
     @DeleteMapping("/{id}")
     public String deleteBook(@PathVariable("id") int id) {
-        //TODO
+        bookDao.deleteById(id);
         return "redirect:/books";
     }
 
