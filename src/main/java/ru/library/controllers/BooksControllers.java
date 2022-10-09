@@ -87,11 +87,8 @@ public class BooksControllers {
 
     @PatchMapping("/{id}")
     public String changePersonId(@PathVariable("id") int id,
-                                 @RequestParam("personId") int personId) {
-        if (personId == - 1)
-            bookDao.setPersonId(id, null);
-        else
-            bookDao.setPersonId(id, personId);
+                                 @RequestParam(value = "personId", required = false) Integer personId) {
+        bookDao.setPersonId(id, personId);
         return "redirect:/books/" + id;
     }
 }

@@ -9,7 +9,6 @@
 <div th:if = "${isUsed}">
     <p th:text="'Книга сейчас у: ' + ${person.getName()}"></p>
     <form th:method="PATCH" th:action="@{/books/{id}(id = ${book.getId()})}">
-        <input type="hidden" name="personId" value="-1">
         <input type = submit value="Освободить книгу">
     </form>
 </div>
