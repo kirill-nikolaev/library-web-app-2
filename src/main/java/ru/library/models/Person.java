@@ -18,7 +18,6 @@ public class Person {
     public Person() {
     }
 
-
     public int getId() {
         return id;
     }

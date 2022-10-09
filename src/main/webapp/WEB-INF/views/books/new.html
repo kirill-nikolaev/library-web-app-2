@@ -7,15 +7,15 @@
 <body>
 <form method="POST" th:action="@{/books/new}" th:object="${book}">
     <label for="title">Введите название книги: </label>
-    <input type="text" id="title" name="title" th:value="${book.getTitle()}">
+    <input type="text" id="title" th:field="*{title}">
     <p STYLE="color: red" th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></p>
     <br/>
     <label for="author">Введите автора: </label>
-    <input type="text" id="author" name="author" th:value="${book.getAuthor()}">
+    <input type="text" id="author" th:field="*{author}">
     <p STYLE="color: red" th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></p>
     <br/>
     <label for="year">Введите год: </label>
-    <input type="text" id="year" name="year" th:value="${book.getYear()}">
+    <input type="text" id="year" th:field="*{year}">
     <p STYLE="color: red" th:if="${#fields.hasErrors('year')}" th:errors="*{year}"></p>
     <br/>
     <input type="submit" value="Добавить">
