@@ -1,24 +1,44 @@
 package ru.library.models;
 
-import org.springframework.stereotype.Component;
-
+import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
-@Component
+@Entity
+@Table(name = "book")
 public class Book {
+    @Id
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "title")
     @Size(min = 2, message = "Название книги слишком короткое")
     @Size(max = 100, message = "Название книги слишком длинное")
     private String title;
+
+    @Column(name = "author")
     @Size(min = 2, message = "Имя автора слишком короткое")
     @Size(max = 30, message = "Имя автора слишком длинное")
     private String author;
+
+    @Column(name = "year")
     @Max(value = 2022, message = "Год не может быть больше 2022")
     @Min(value = 0, message = "Год должен быть больше 0" )
     private int year;
-    private Integer personId;
+
+    @ManyToOne
+    @JoinColumn(name = "person_id", referencedColumnName = "id")
+    private Person person;
+
+    public Book() {
+    }
+
+    public Book(String title, String author, int year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+    }
 
     public int getId() {
         return id;
@@ -52,11 +72,11 @@ public class Book {
         this.year = year;
     }
 
-    public Integer getPersonId() {
-        return personId;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setPersonId(Integer personId) {
-        this.personId = personId;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 }
