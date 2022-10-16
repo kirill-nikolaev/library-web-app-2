@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление книги</title>
+</head>
+<body>
+
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none fs-3">
+            Каталог
+        </div>
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="/people" class="nav-link">Список читателей</a></li>
+            <li class="nav-item"><a href="/books" class="nav-link">Список книг</a></li>
+        </ul>
+    </header>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <form th:method="GET" th:action="@{/books/search}">
+                <div class="mb-3">
+                    <label for="search" class="form-label">Введите поисковый запрос</label>
+                    <input type="text" class="form-control" id="search" name="search">
+                </div>
+                <input type="submit" class="btn btn-primary btn-sm" value="Искать!"/>
+            </form>
+            <div th:if="${hasSearchRequest}">
+                <div th:if="${books.isEmpty()}" >Книг не найдено</div>
+                <div th:if="not ${books.isEmpty()}">
+                    <div th:each="book : ${books}" class="py-2">
+                        <a th:href="@{/books/{id}(id = ${book.getId()})}"
+                           th:text="${book.getTitle()} + ', ' + ${book.getAuthor()} + ', ' + ${book.getYear()}"
+                           class="link-dark"></a>
+                        <div th:if="${book.getPerson()} == null">Книга свободна</div>
+                        <div th:if="${book.getPerson()} != null"
+                                 th:text="'Книга сейчас у: ' + ${book.getPerson().getName()}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

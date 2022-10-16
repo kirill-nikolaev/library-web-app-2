@@ -15,7 +15,6 @@ import ru.library.services.PeopleService;
 import javax.validation.Valid;
 import java.util.List;
 
-
 @Controller
 @RequestMapping("/books")
 public class BooksControllers {
@@ -30,8 +29,14 @@ public class BooksControllers {
     }
 
     @GetMapping("")
-    public String showBooks(Model model) {
-        model.addAttribute("books", booksService.findAll());
+    public String showBooks(Model model,
+                            @RequestParam(value = "sort_by_year", required = false) boolean isSorted,
+                            @RequestParam(value = "page", required = false) Integer page,
+                            @RequestParam(value = "books_per_page", required = false) Integer booksPerPage) {
+        if (page != null && booksPerPage != null)
+            model.addAttribute("books", booksService.findAll(page, booksPerPage, isSorted));
+        else
+            model.addAttribute("books", booksService.findAll(isSorted));
         return "books/showBooks";
     }
 
@@ -96,5 +101,18 @@ public class BooksControllers {
 
         booksService.setPerson(id, person);
         return "redirect:/books/" + id;
+    }
+
+    @GetMapping("/search")
+    public String searchBook(Model model,
+                             @RequestParam(value = "search", required = false) String search) {
+        if (search == null || search.equals(""))
+            model.addAttribute("hasSearchRequest", false);
+        else {
+            model.addAttribute("hasSearchRequest", true);
+            List<Book> foundBooks = booksService.findByTitleStartingWith(search);
+            model.addAttribute("books", foundBooks);
+        }
+        return "books/search";
     }
 }
