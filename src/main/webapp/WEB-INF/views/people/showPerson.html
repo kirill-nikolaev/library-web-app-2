@@ -32,7 +32,8 @@
             <div th:if="${not books.isEmpty()}">
                 <h5>Книги:</h5>
                 <div th:each="book:${books}">
-                    <div th:text="${book.getTitle()} + ', ' + ${book.getAuthor()} + ', ' + ${book.getYear()}"></div>
+                    <div th:text="${book.getTitle()} + ', ' + ${book.getAuthor()} + ', ' + ${book.getYear()}"
+                    th:class="${book.isExpired()}? 'text-danger' : 'text-dark'"></div>
                 </div>
             </div>
         </div>

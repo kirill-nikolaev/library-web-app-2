@@ -12,5 +12,6 @@ CREATE TABLE book (
     title VARCHAR (100),
     author VARCHAR (30),
     year INT CHECK (year >= 0 AND year <= 2020 ),
-    person_id INT REFERENCES person(id) ON DELETE SET NULL
+    person_id INT REFERENCES person(id) ON DELETE SET NULL,
+    issuing_time TIMESTAMP
 );

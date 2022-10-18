@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "book")
@@ -27,9 +28,17 @@ public class Book {
     @Min(value = 0, message = "Год должен быть больше 0" )
     private int year;
 
+    @Column(name = "issuing_time")
+    private LocalDateTime issuingTime;
+
     @ManyToOne
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person person;
+
+
+
+    @Transient
+    private boolean isExpired;
 
     public Book() {
     }
@@ -78,5 +87,21 @@ public class Book {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+
+    public LocalDateTime getIssuingTime() {
+        return issuingTime;
+    }
+
+    public void setIssuingTime(LocalDateTime issuingTime) {
+        this.issuingTime = issuingTime;
+    }
+
+    public boolean isExpired() {
+        return isExpired;
+    }
+
+    public void setExpired(boolean expired) {
+        isExpired = expired;
     }
 }

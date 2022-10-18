@@ -10,7 +10,9 @@ import ru.library.models.Book;
 import ru.library.models.Person;
 import ru.library.repositories.BooksRepository;
 
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BooksService {
@@ -70,9 +72,15 @@ public class BooksService {
 
     @Transactional
     public void setPerson(int id, Person person) {
-        Book book = booksRepository.findById(id).orElse(null);
-        if (book != null)
+        Optional<Book> optionalBook = booksRepository.findById(id);
+        if (optionalBook.isPresent()) {
+            Book book = optionalBook.get();
             book.setPerson(person);
+            if (person != null)
+                book.setIssuingTime(LocalDateTime.now());
+            else
+                book.setIssuingTime(null);
+        }
     }
 
 }
