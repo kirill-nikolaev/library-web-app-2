@@ -10,13 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff226ced-e472-453c-9c37-1b7227428c31" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca5dcba4-2dfd-432a-8324-e374d2960b46.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca5dcba4-2dfd-432a-8324-e374d2960b46.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ca5dcba4-2dfd-432a-8324-e374d2960b46/storage_v2/_src_/database/library_db.gs7L3Q/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ca5dcba4-2dfd-432a-8324-e374d2960b46/storage_v2/_src_/database/library_db.gs7L3Q/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/services/BooksService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/services/BooksService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/services/PeopleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/services/PeopleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/sql/create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/create_tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/library/controllers/BooksControllers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/library/controllers/BooksControllers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBook.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBooks.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/showBooks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPeople.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPeople.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPerson.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/showPerson.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,24 +73,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/kirill/IdeaProjects/library-web-app-2&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;a1074c7ecb76304d02a198a7722a439b&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "last_opened_file_path": "/home/kirill/IdeaProjects/tasks",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "a1074c7ecb76304d02a198a7722a439b"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.library.config" />
@@ -240,7 +246,11 @@
       <workItem from="1665929493844" duration="4906000" />
       <workItem from="1666016031213" duration="475000" />
       <workItem from="1666018353746" duration="1751000" />
-      <workItem from="1666066003715" duration="319000" />
+      <workItem from="1666066003715" duration="1935000" />
+      <workItem from="1666074185285" duration="1527000" />
+      <workItem from="1666180384562" duration="14000" />
+      <workItem from="1666185150154" duration="3817000" />
+      <workItem from="1666250559526" duration="1213000" />
     </task>
     <task id="LOCAL-00001" summary="rewrite with spring data jpa">
       <created>1665844684878</created>
@@ -275,7 +285,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/library/controllers/BooksControllers.java</url>
-          <line>113</line>
+          <line>114</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
