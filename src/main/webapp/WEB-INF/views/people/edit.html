@@ -2,11 +2,11 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
+    <link crossorigin="anonymous"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Изменение данных о читателе</title>
 </head>
 <body>
@@ -17,36 +17,34 @@
             Каталог
         </div>
         <ul class="nav nav-pills">
-            <li class="nav-item"><a href="/people" class="nav-link">Список читателей</a></li>
-            <li class="nav-item"><a href="/books" class="nav-link">Список книг</a></li>
-            <li class="nav-item"><a href="/books/search" class="nav-link">Поиск книг по названию</a></li>
+            <li class="nav-item"><a class="nav-link" href="/people">Список читателей</a></li>
+            <li class="nav-item"><a class="nav-link" href="/books">Список книг</a></li>
+            <li class="nav-item"><a class="nav-link" href="/books/search">Поиск книг по названию</a></li>
         </ul>
     </header>
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-6 mx-auto">
-            <form th:method="PUT"
-                  th:action="@{/people/{id}(id = ${person.getId()})}"
-                  th:object="${person}">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Введите ФИО: </label>
-                    <input type="text" class="form-control" id="name" th:field="*{name}">
-                    <div class="form-text text-danger"
-                         th:if="${#fields.hasErrors('name')}"
-                         th:errors="*{name}"></div>
-                </div>
-                <div class="mb-3">
-                    <label for="year" class="form-label">Введите год рождения: </label>
-                    <input type="text" class="form-control" id="year" th:field="*{year}">
-                    <div class="form-text text-danger"
-                         th:if="${#fields.hasErrors('year')}"
-                         th:errors="*{year}"></div>
-                </div>
-                <input type="submit"  class="btn btn-primary" value="Редактировать">
-            </form>
-        </div>
+    <div class="col-lg-6 mx-auto">
+        <form th:action="@{/people/{id}(id = ${person.getId()})}"
+              th:method="PUT"
+              th:object="${person}">
+            <div class="mb-3">
+                <label class="form-label" for="name">Введите ФИО: </label>
+                <input class="form-control" id="name" th:field="*{name}" type="text">
+                <div class="form-text text-danger"
+                     th:errors="*{name}"
+                     th:if="${#fields.hasErrors('name')}"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="year">Введите год рождения: </label>
+                <input class="form-control" id="year" th:field="*{year}" type="text">
+                <div class="form-text text-danger"
+                     th:errors="*{year}"
+                     th:if="${#fields.hasErrors('year')}"></div>
+            </div>
+            <input class="btn btn-primary" type="submit" value="Редактировать">
+        </form>
     </div>
 </div>
 </body>

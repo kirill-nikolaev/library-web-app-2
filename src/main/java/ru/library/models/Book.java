@@ -1,5 +1,9 @@
 package ru.library.models;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -8,6 +12,9 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "book")
+@Getter
+@Setter
+@NoArgsConstructor
 public class Book {
     @Id
     @Column(name = "id")
@@ -35,73 +42,12 @@ public class Book {
     @JoinColumn(name = "person_id", referencedColumnName = "id")
     private Person person;
 
-
-
     @Transient
     private boolean isExpired;
-
-    public Book() {
-    }
 
     public Book(String title, String author, int year) {
         this.title = title;
         this.author = author;
         this.year = year;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public Person getPerson() {
-        return person;
-    }
-
-    public void setPerson(Person person) {
-        this.person = person;
-    }
-
-    public LocalDateTime getIssuingTime() {
-        return issuingTime;
-    }
-
-    public void setIssuingTime(LocalDateTime issuingTime) {
-        this.issuingTime = issuingTime;
-    }
-
-    public boolean isExpired() {
-        return isExpired;
-    }
-
-    public void setExpired(boolean expired) {
-        isExpired = expired;
     }
 }

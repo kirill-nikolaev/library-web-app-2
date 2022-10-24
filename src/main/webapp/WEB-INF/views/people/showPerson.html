@@ -23,33 +23,29 @@
     </header>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-6 mx-auto">
-            <div th:text = "${person.getName()} + ', ' + ${person.getYear()}"></div>
-            <hr/>
-            <p th:if="${books.isEmpty()}">
-                Человек пока не взял ни одной книги
-            </p>
-            <div th:if="${not books.isEmpty()}">
-                <h5>Книги:</h5>
-                <div th:each="book:${books}">
-                    <div th:text="${book.getTitle()} + ', ' + ${book.getAuthor()} + ', ' + ${book.getYear()}"
-                    th:class="${book.isExpired()}? 'text-danger' : 'text-dark'"></div>
-                </div>
+    <div class="col-lg-6 mx-auto">
+        <div th:text="${person.getName()} + ', ' + ${person.getYear()}"></div>
+        <hr/>
+        <p th:if="${books.isEmpty()}">
+            Человек пока не взял ни одной книги
+        </p>
+        <div th:if="${not books.isEmpty()}">
+            <h5>Книги:</h5>
+            <div th:each="book:${books}">
+                <div th:text="${book.getTitle()} + ', ' + ${book.getAuthor()} + ', ' + ${book.getYear()}"
+                     th:class="${book.isExpired()}? 'text-danger' : 'text-dark'"></div>
             </div>
         </div>
         <hr/>
-        <div class="row">
-            <div class="col-lg-6 mx-auto btn-group" >
-                    <form th:action="@{/people/{id}/edit(id = ${person.getId()})}" >
-                        <input type="submit" class="btn btn-warning" value="Редактировать">
-                    </form>
-                    <form th:method="DELETE" th:action="@{/people/{id}(id = ${person.getId()})}"
-                          class="px-4">
-                        <input type="submit" class="btn btn-danger" value="Удалить">
-                    </form>
+        <div class="col-lg-6 mx-auto btn-group">
+            <form th:action="@{/people/{id}/edit(id = ${person.getId()})}">
+                <input type="submit" class="btn btn-warning" value="Редактировать">
+            </form>
+            <form th:method="DELETE" th:action="@{/people/{id}(id = ${person.getId()})}"
+                  class="px-4">
+                <input type="submit" class="btn btn-danger" value="Удалить">
+            </form>
 
-            </div>
         </div>
     </div>
 </div>

@@ -25,26 +25,24 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-6 mx-auto">
-            <form method="POST" th:action="@{/people/new}" th:object="${person}">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Введите ФИО: </label>
-                    <input type="text" class="form-control" id="name" th:field="*{name}">
-                    <div class="form-text text-danger"
-                         th:if="${#fields.hasErrors('name')}"
-                         th:errors="*{name}"></div>
-                </div>
-                <div class="mb-3">
-                    <label for="year" class="form-label">Введите год рождения: </label>
-                    <input type="text" class="form-control" id="year" th:field="*{year}">
-                    <div class="form-text text-danger"
-                         th:if="${#fields.hasErrors('year')}"
-                         th:errors="*{year}"></div>
-                </div>
-                <input type="submit"  class="btn btn-primary" value="Добавить">
-            </form>
-        </div>
+    <div class="col-lg-6 mx-auto">
+        <form method="POST" th:action="@{/people/new}" th:object="${person}">
+            <div class="mb-3">
+                <label for="name" class="form-label">Введите ФИО: </label>
+                <input type="text" class="form-control" id="name" th:field="*{name}">
+                <div class="form-text text-danger"
+                     th:if="${#fields.hasErrors('name')}"
+                     th:errors="*{name}"></div>
+            </div>
+            <div class="mb-3">
+                <label for="year" class="form-label">Введите год рождения: </label>
+                <input type="text" class="form-control" id="year" th:field="*{year}">
+                <div class="form-text text-danger"
+                     th:if="${#fields.hasErrors('year')}"
+                     th:errors="*{year}"></div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Добавить">
+        </form>
     </div>
 </div>
 </body>
